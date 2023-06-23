@@ -25,12 +25,12 @@ public class ProfessorMapper {
                             .build();
     }
 
-    public Professor toUpdate(ProfessorResponse ProfessorUpdate){
-        return Professor.builder().id(ProfessorUpdate.getId())
-                            .nome(ProfessorUpdate.getNome())
-                            .matricula(ProfessorUpdate.getMatricula())
-                            .curso(ProfessorUpdate.getCurso())
-                            .idEndereco(ProfessorUpdate.getIdEndereco())
+    public Professor toUpdate(ProfessorResponse professorUpdate){
+        return Professor.builder().id(professorUpdate.getId())
+                            .nome(professorUpdate.getNome())
+                            .matricula(professorUpdate.getMatricula())
+                            .curso(professorUpdate.getCurso())
+                            .idEndereco(professorUpdate.getIdEndereco())
                             .build();
     }
 }
