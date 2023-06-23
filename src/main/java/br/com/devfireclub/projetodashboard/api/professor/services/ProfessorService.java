@@ -14,10 +14,10 @@ import br.com.devfireclub.projetodashboard.core.repositories.ProfessorRepository
 public class ProfessorService {
     
     @Autowired
-    ProfessorRepository professorRepository;
+    private ProfessorRepository professorRepository;
     
     @Autowired
-    ProfessorMapper professorMapper;
+    private ProfessorMapper professorMapper;
 
     public List<ProfessorResponse> findAll(){
         return professorRepository.findAll()

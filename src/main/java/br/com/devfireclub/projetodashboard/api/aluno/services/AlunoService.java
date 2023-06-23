@@ -12,10 +12,10 @@ import br.com.devfireclub.projetodashboard.core.repositories.AlunoRepository;
 public class AlunoService {
     
     @Autowired
-    AlunoRepository alunoRepository;
+    private AlunoRepository alunoRepository;
     
     @Autowired
-    AlunoMapper alunoMapper;
+    private AlunoMapper alunoMapper;
 
     public List<AlunoResponse> findAll(){
         return alunoRepository.findAll()
