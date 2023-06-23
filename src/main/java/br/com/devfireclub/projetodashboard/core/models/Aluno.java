@@ -34,14 +34,14 @@ public class Aluno implements Serializable{
     @Column(name = "cpf")
     private String cpf;
     
-    @Column(name = "nome")
+    @Column(name = "nome", nullable = false)
     private String nome;
 
     @EqualsAndHashCode.Include
     @Column(name = "matricula")
     private String matricula;
     
-    @Column(name = "curso")
+    @Column(name = "curso", nullable = false)
     private String curso;
 
     @Column(name = "id_endereco")
