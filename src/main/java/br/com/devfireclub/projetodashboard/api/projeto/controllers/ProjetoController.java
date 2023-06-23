@@ -34,6 +34,11 @@ public class ProjetoController {
         return projetoService.findById(id);
     }
 
+    @GetMapping("/tituloProjeto/{tituloProjeto}")
+    public ProjetoResponse findByTituloProjeto(@PathVariable String tituloProjeto){
+        return projetoService.findProjetoByTituloProjeto(tituloProjeto);
+    }
+
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
     public ProjetoResponse create(@RequestBody ProjetoRequest projetoRequest){

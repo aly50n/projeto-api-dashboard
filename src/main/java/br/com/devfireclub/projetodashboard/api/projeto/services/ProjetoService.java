@@ -31,6 +31,11 @@ public class ProjetoService {
         return projetoMapper.toResponse(projeto);
     }
 
+    public ProjetoResponse findProjetoByTituloProjeto(String tituloProjeto){
+        var projeto = projetoRepository.findByTituloProjeto(tituloProjeto);
+        return projetoMapper.toResponse(projeto);
+    }
+
     public ProjetoResponse create(ProjetoRequest projetoRequest){
         var projetoToCreate = projetoMapper.toModel(projetoRequest);
         var createdProjeto = projetoRepository.save(projetoToCreate);

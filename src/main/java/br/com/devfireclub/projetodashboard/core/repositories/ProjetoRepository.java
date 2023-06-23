@@ -9,4 +9,12 @@ public interface ProjetoRepository extends JpaRepository<Projeto, Long> {
         return findById(id)
                         .orElseThrow(ProjetoNotFoundException::new);
     }
+
+    default Projeto findByTituloProjeto(String tituloProjeto){
+        return findAll()
+                        .stream()
+                        .filter(projeto -> projeto.getTituloProjeto().equals(tituloProjeto))
+                        .findFirst()
+                        .orElseThrow(ProjetoNotFoundException::new);
+    };
 }
