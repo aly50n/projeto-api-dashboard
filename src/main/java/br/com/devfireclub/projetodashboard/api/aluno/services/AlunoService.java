@@ -24,10 +24,26 @@ public class AlunoService {
                             .toList();
     }
 
+    public AlunoResponse findById(Long id){
+        var aluno = alunoRepository.findByIdOrElseThrow(id);
+        return alunoMapper.toResponse(aluno);
+    }
+
     public AlunoResponse create(AlunoRequest alunoRequest){
         var alunoToCreate = alunoMapper.toModel(alunoRequest);
         var createdAluno = alunoRepository.save(alunoToCreate);
         return alunoMapper.toResponse(createdAluno);
     }
-    
+
+    public AlunoResponse update(Long id, AlunoResponse alunoResponse){
+        var alunoToUpdate = alunoMapper.toUpdate(alunoResponse);
+        var updatedAluno = alunoRepository.save(alunoToUpdate);
+        return alunoMapper.toResponse(updatedAluno);
+    }
+    public void delete(Long id) {
+        alunoRepository.deleteById(id);
+    }
+
 }
+    
+

@@ -1,7 +1,6 @@
 package br.com.devfireclub.projetodashboard.api.aluno.mappers;
 
 import org.springframework.stereotype.Component;
-
 import br.com.devfireclub.projetodashboard.api.aluno.dtos.AlunoRequest;
 import br.com.devfireclub.projetodashboard.api.aluno.dtos.AlunoResponse;
 import br.com.devfireclub.projetodashboard.core.models.Aluno;
@@ -25,6 +24,16 @@ public class AlunoMapper {
                             .matricula(aluno.getMatricula())
                             .curso(aluno.getCurso())
                             .idEndereco(aluno.getIdEndereco())
+                            .build();
+    }
+
+    public Aluno toUpdate(AlunoResponse alunoUpdate){
+        return Aluno.builder().id(alunoUpdate.getId())
+                            .cpf(alunoUpdate.getCpf())
+                            .nome(alunoUpdate.getNome())
+                            .matricula(alunoUpdate.getMatricula())
+                            .curso(alunoUpdate.getCurso())
+                            .idEndereco(alunoUpdate.getIdEndereco())
                             .build();
     }
 }
