@@ -28,6 +28,11 @@ public class AlunoController {
         return alunoService.findAll();
     }
 
+    @GetMapping("/{id}")
+    public AlunoResponse findById(@PathVariable Long id){
+        return alunoService.findById(id);
+    }
+
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
     public AlunoResponse create(@RequestBody AlunoRequest alunoRequest){

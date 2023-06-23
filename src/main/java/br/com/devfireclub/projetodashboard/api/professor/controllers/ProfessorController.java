@@ -29,6 +29,11 @@ public class ProfessorController {
     public List<ProfessorResponse> findAll(){
         return professorService.findAll();
     }
+    
+    @GetMapping("/{id}")
+    public ProfessorResponse findById(@PathVariable Long id){
+        return professorService.findById(id);
+    }
 
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
