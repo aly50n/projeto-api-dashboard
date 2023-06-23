@@ -35,7 +35,7 @@ public class AlunoController {
     }
 
     @PutMapping("/update/{id}")
-    @ResponseStatus(code = HttpStatus.CREATED)
+    @ResponseStatus(code = HttpStatus.OK)
     public AlunoResponse update(@PathVariable Long id, @RequestBody AlunoResponse alunoResponse){
         return alunoService.update(id,alunoResponse);
     }
