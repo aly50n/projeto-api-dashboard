@@ -9,4 +9,12 @@ public interface AlunoRepository extends JpaRepository<Aluno, Long>{
         return findById(id)
                         .orElseThrow(AlunoNotFoundException::new);
     }
+
+    default Aluno findByMatricula(String matricula){
+        return findAll()
+                        .stream()
+                        .filter(aluno -> aluno.getMatricula().equals(matricula))
+                        .findFirst()
+                        .orElseThrow(AlunoNotFoundException::new);
+    };
 }

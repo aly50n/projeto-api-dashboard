@@ -33,6 +33,11 @@ public class AlunoController {
         return alunoService.findById(id);
     }
 
+    @GetMapping("/matricula/{matricula}")
+    public AlunoResponse findByMatricula(@PathVariable String matricula){
+        return alunoService.findAlunoByMatricula(matricula);
+    }
+
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
     public AlunoResponse create(@RequestBody AlunoRequest alunoRequest){

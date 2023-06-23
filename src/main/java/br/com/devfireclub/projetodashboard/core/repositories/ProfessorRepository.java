@@ -9,4 +9,12 @@ public interface ProfessorRepository extends JpaRepository<Professor, Long> {
         return findById(id)
                         .orElseThrow(ProfessorNotFoundException::new);
     }
+
+    default Professor findByMatricula(String matricula){
+        return findAll()
+                        .stream()
+                        .filter(professor -> professor.getMatricula().equals(matricula))
+                        .findFirst()
+                        .orElseThrow(ProfessorNotFoundException::new);
+    };
 }

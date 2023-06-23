@@ -29,6 +29,11 @@ public class AlunoService {
         return alunoMapper.toResponse(aluno);
     }
 
+    public AlunoResponse findAlunoByMatricula(String matricula){
+        var aluno = alunoRepository.findByMatricula(matricula);
+        return alunoMapper.toResponse(aluno);
+    }
+
     public AlunoResponse create(AlunoRequest alunoRequest){
         var alunoToCreate = alunoMapper.toModel(alunoRequest);
         var createdAluno = alunoRepository.save(alunoToCreate);

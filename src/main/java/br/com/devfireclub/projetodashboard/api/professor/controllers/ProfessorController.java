@@ -35,6 +35,11 @@ public class ProfessorController {
         return professorService.findById(id);
     }
 
+    @GetMapping("/matricula/{matricula}")
+    public ProfessorResponse findByMatricula(@PathVariable String matricula){
+        return professorService.findProfessorByMatricula(matricula);
+    }
+
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
     public ProfessorResponse create(@RequestBody ProfessorRequest professorRequest){

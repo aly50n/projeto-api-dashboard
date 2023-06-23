@@ -31,6 +31,11 @@ public class ProfessorService {
         return professorMapper.toResponse(professor);
     }
 
+    public ProfessorResponse findProfessorByMatricula(String matricula){
+        var professor = professorRepository.findByMatricula(matricula);
+        return professorMapper.toResponse(professor);
+    }
+
     public ProfessorResponse create(ProfessorRequest professorRequest){
         var professorToCreate = professorMapper.toModel(professorRequest);
         var createdProfessor = professorRepository.save(professorToCreate);
