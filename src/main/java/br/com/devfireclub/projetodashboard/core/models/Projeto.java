@@ -41,6 +41,9 @@ public class Projeto {
     @Column(name="palavraChave3")
     private String palavraChave3;
 
+    @Column(name="resumo")
+    private String resumo;
+
     @Column(name="url")
     private String url;
 

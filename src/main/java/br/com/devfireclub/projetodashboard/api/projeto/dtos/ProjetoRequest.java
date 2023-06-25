@@ -21,6 +21,8 @@ public class ProjetoRequest {
 
     private String palavraChave3;
 
+    private String resumo;
+
     private String url;
 
     private Long idProfessorResponsavel;
