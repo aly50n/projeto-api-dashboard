@@ -2,7 +2,8 @@
 
 Neste projeto desenvolvi uma API-REST para uma aplicação WEB passada pelo professor da 
 cadeira de Programação WEB onde tinhamos tabelas de gerencimento de alunos, professores e 
-projetos, utilizando a linguagem Java e o framework Spring Boot que é uma extensão do 
+projetos. 
+Utilizei a linguagem Java e o framework Spring Boot que é uma extensão do 
 Spring Framework que visa simplificar o processo de configuração e desenvolvimento de 
 aplicativos Spring para uma aplicação WEB.
 
