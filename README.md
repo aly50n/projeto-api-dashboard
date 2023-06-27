@@ -1,9 +1,10 @@
 # projeto-api-dashboard
 
 Neste projeto desenvolvi uma API-REST para uma aplicação WEB passada pelo professor da 
-cadeira de Programação WEB utilizando a linguagem Java e o framework Spring Boot que é 
-uma extensão do Spring Framework que visa simplificar o processo de configuração e desenvolvimento 
-de aplicativos Spring para uma aplicação WEB.
+cadeira de Programação WEB onde tinhamos tabelas de gerencimento de alunos, professores e 
+projetos, utilizando a linguagem Java e o framework Spring Boot que é uma extensão do 
+Spring Framework que visa simplificar o processo de configuração e desenvolvimento de 
+aplicativos Spring para uma aplicação WEB.
 
 As principais vantagens de usar o Spring Boot são:
 1-Facilidade de configuração.
