@@ -1,5 +1,6 @@
 package br.com.devfireclub.projetodashboard.api.aluno.dtos;
 
+import br.com.devfireclub.projetodashboard.core.models.Endereco;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -21,5 +22,5 @@ public class AlunoResponse {
 
     private String curso;
 
-    private Long idEndereco;
+    private Endereco endereco;
 }

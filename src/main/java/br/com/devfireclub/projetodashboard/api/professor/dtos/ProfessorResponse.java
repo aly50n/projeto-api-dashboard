@@ -1,5 +1,6 @@
 package br.com.devfireclub.projetodashboard.api.professor.dtos;
 
+import br.com.devfireclub.projetodashboard.core.models.Endereco;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,6 +19,6 @@ public class ProfessorResponse {
 
     private String curso;
 
-    private Long idEndereco;
+    private Endereco endereco;
 
 }

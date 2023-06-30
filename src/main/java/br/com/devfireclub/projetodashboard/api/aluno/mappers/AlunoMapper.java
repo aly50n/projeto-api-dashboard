@@ -13,7 +13,7 @@ public class AlunoMapper {
                     .cpf(alunoRequest.getCpf())
                     .nome(alunoRequest.getNome())
                     .curso(alunoRequest.getCurso())
-                    .idEndereco(alunoRequest.getIdEndereco())
+                    .endereco(alunoRequest.getEndereco())
                     .build();
     }
 
@@ -23,7 +23,7 @@ public class AlunoMapper {
                             .nome(aluno.getNome())
                             .matricula(aluno.getMatricula())
                             .curso(aluno.getCurso())
-                            .idEndereco(aluno.getIdEndereco())
+                            .endereco(aluno.getEndereco())
                             .build();
     }
 
@@ -33,7 +33,7 @@ public class AlunoMapper {
                             .nome(alunoUpdate.getNome())
                             .matricula(alunoUpdate.getMatricula())
                             .curso(alunoUpdate.getCurso())
-                            .idEndereco(alunoUpdate.getIdEndereco())
+                            .endereco(alunoUpdate.getEndereco())
                             .build();
     }
 }

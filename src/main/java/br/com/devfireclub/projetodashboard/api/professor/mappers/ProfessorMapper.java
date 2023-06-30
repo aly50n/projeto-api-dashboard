@@ -12,7 +12,7 @@ public class ProfessorMapper {
         return Professor.builder()
                     .nome(professorRequest.getNome())
                     .curso(professorRequest.getCurso())
-                    .idEndereco(professorRequest.getIdEndereco())
+                    .endereco(professorRequest.getEndereco())
                     .build();
     }
 
@@ -21,7 +21,7 @@ public class ProfessorMapper {
                             .nome(professor.getNome())
                             .matricula(professor.getMatricula())
                             .curso(professor.getCurso())
-                            .idEndereco(professor.getIdEndereco())
+                            .endereco(professor.getEndereco())
                             .build();
     }
 
@@ -30,7 +30,7 @@ public class ProfessorMapper {
                             .nome(professorUpdate.getNome())
                             .matricula(professorUpdate.getMatricula())
                             .curso(professorUpdate.getCurso())
-                            .idEndereco(professorUpdate.getIdEndereco())
+                            .endereco(professorUpdate.getEndereco())
                             .build();
     }
 }
